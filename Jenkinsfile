@@ -23,7 +23,7 @@ pipeline {
     stage('stage3') {
       when {
         expression {
-          env 'test'
+          environment 'env' 'test'
         }
 
       }
