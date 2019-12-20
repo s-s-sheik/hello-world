@@ -14,5 +14,26 @@ pipeline {
       }
     }
 
+    stage('stage2') {
+      steps {
+        echo 'stage2'
+      }
+    }
+
+    stage('stage3') {
+      when {
+        expression {
+          env 'test'
+        }
+
+      }
+      steps {
+        echo 'stage3'
+      }
+    }
+
+  }
+  environment {
+    env = 'test'
   }
 }
