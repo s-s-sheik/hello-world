@@ -9,15 +9,9 @@ mvn clean'''
       }
     }
 
-    stage('build') {
+    stage('stage1') {
       steps {
-        sh 'mvn -Dmaven.test.failure.ignore=true install'
-      }
-    }
-
-    stage('Report') {
-      steps {
-        echo 'completed'
+        echo 'stage1'
       }
     }
 
